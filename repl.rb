@@ -1,15 +1,15 @@
-# by Russ Olsen
-# http://eloquentruby.com
+# Inspired by Russ Olsen (http://eloquentruby.com)
 
-require 'lithp'
-require 'reader'
+require File.dirname(__FILE__) + '/tinybf'
 
-lisp = Lisp.new
+bf = Bf.new lambda {|i| print i},  lambda { gets.chomp}
 
 print "> "
-while not $stdin.eof?
-  line = readline
-  s_expression = SExpressionParser.new(line).parse
-  p lisp.eval(s_expression)
+until $stdin.eof?
+  line = STDIN.readline.strip.gsub("\e[A\e[B[.", '')
+  break if line == "exit"
+  res = bf.eval(line.split(//))
+  puts
+  p res
   print "> "
 end
