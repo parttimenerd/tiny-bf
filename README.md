@@ -1,14 +1,14 @@
 # tiny bf
 
-A micro Brainfuck implementation in ~18 lines of Ruby, with a REPL. Inspired by Fogus [uLithp blog post](http://blog.fogus.me/2012/01/25/lisp-in-40-lines-of-ruby/)
+A tiny brainf**ck implementation in ~19 lines of Ruby, with a REPL. Inspired by Fogus [uLithp blog post](http://blog.fogus.me/2012/01/25/lisp-in-40-lines-of-ruby/)
 
-It implements a brainfuck interpreter with a cell size of 7 bytes
+It implements a brainf**ck interpreter with a cell size of 7 bytes
 
 See the tinybf.rb file for implementation details.
 
 ## Embedded usage
 
-The brainfuck interpreter is just a Ruby class that evals expressions in Ruby string arrays, like so:
+The brainf**ck interpreter is just a Ruby class that evals expressions in Ruby string arrays, like so:
 
 ```ruby
 	
@@ -37,9 +37,10 @@ You'll then see a prompt:
 
     >
 	
-Start typing brainfuck code:
+Start typing brain**ck code:
 
-```Hello World program
+```
+Hello World program
 >+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.[-]>++++++++[<++++>-]
 <.#>+++++++++++[<+++++>-]<.>++++++++[<+++>-]<.+++.------.--------.[-]>++++++++[
 <++++>-]<+.[-]++++++++++.
